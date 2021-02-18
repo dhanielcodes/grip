@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+}
+body{
+    background: #0D0D0D;
+    overflow: hidden;
+}
+.grip{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: -1;
+    width: 800px;
+}
+.container{
+    padding-top: 50px;
+}
+.container h1{
+    color: white;
+    font-size: 70px;
+}
+.container h1 span{
+    -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color: #ffffff;
+  color: #0D0D0D;
+}
+.container p{
+    margin-top: 20px;
+    color: #9A9A9A;
+}
+.cta{
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    background: #0159F8;
+    padding: 20px 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.cards{
+    width: 600px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.info{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.info img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+}
+.info .main{
+    width: 60%;
+    margin: auto;
+}
+.info p{
+    font-family: 'Gilroy-Bold';
+    color: white;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.overlay{
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.453);
+    z-index: 15;
+    transform: translateY(30px);
+}
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 40px;
+    border-radius: 30px;
+    background: #0D0D0D;
+    color: white;
+    text-align: center;
+}
+.form2{
+    opacity: 0;
+    pointer-events: none;
+}
+.form span{
+    font-size: 20px;
+}
+.form input{
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #2E2E2E;
+    background: #0D0D0D;
+    width: 100%;
+    margin-top: 25px;
+    outline: none;
+    color: white;
+}
+::placeholder{
+    color: #474747;
+}
+.form button{
+    margin-top: 40px;
+    background: #0159F8;
+    padding: 20px 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+}
+.form p{
+    margin-top: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.form .close{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media(min-width: 1570px){
+    .grip{
+        bottom: 300px;
+        width: 1000px;
+    }
+    .cards{
+        width: 60%;
+    }
+    .info .main{
+        width: 1500px;
+    }
+}
+@media(max-width: 1125px){
+    .info .main{
+        width: 90%;
+    }
+}
+@media(max-width: 630px){
+    .container{
+        padding-top: 100px;
+    }
+    .container h1{
+        font-size: 40px;
+    }
+    .cards{
+        width: 100%;
+    }
+    .info p{
+        font-size: 15px;
+    }
+}
+@media (max-width: 400px){
+    .form{
+        width: 90%;
+    }
+    .form img{
+        width: 90%;
+    }
+}
