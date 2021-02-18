@@ -1,4 +1,5 @@
 @font-face { font-family: 'Sharp Grotesk DB Cyr Medium 22'; src: url('./0b6986b36b7d81188f996e58f2ec0643.ttf'); src: url('./0b6986b36b7d81188f996e58f2ec0643.woff'); }
+@font-face { font-family: 'Gilroy-bold'; src: url('./1064f0ad1cb65fdab43bb592ddd8aa91.ttf'); src: url('./1064f0ad1cb65fdab43bb592ddd8aa91.woff'); }
 *{
     padding: 0;
     margin: 0;
@@ -94,6 +95,15 @@ body{
     background: rgba(0, 0, 0, 0.453);
     z-index: 15;
     transform: translateY(30px);
+}
+.closer{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.453);
 }
 .form{
     position: absolute;
