@@ -9,6 +9,7 @@
 </head>
 <body>
     <img src="./grip.svg" alt="" class="grip">
+    <div class="vertical building">What we are Building</div>
     <center class="container">
         <div>
             <h1>You only need<br>one <span>Card</span></h1>        
@@ -35,25 +36,29 @@
         </div>
     </div>
     <div class="overlay">
-        <div class="closer"></div>
-        <form action="" class="form">
-            <span>Be the first to know when we launch</span>
-            <input placeholder="Full Name" type="text" name="name" id="name" required>
-            <input placeholder="Email" type="email" name="email" id="email" required>
-            <button>
-                Sign Up
-            </button>
-            <p>What are we building?</p>
+        <div class="closer exit"></div>
+        <form class="form" id="form">
+            <div class="form2">
+                <img src="./sent.svg" alt="" srcset="">
+                <p>Yaayy! We’ll notify you when we launch</p>
+                <svg class="close exit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+            </div>
+            <div class="form1">
+                <span>Be the first to know when we launch</span>
+                <input placeholder="Full Name" type="text" name="name" id="name" required>
+                <input placeholder="Email" type="email" name="email" id="email" required>
+                <button>
+                    Sign Up
+                </button>
+                <p class="building">What are we building?</p>
+            </div>
         </form>
-        <div class="form form2">
-            <img src="./sent.svg" alt="" srcset="">
-            <p>Yaayy! We’ll notify you when we launch</p>
-            <svg class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-        </div>
+        
+        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
