@@ -156,6 +156,7 @@ body{
     color: #474747;
 }
 .form img{
+    width: 90%;
     pointer-events: none;
 }
 .form button{
