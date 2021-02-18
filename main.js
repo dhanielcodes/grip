@@ -23,10 +23,18 @@ ctas.forEach((cta) => {
             pointerEvents: 'all',
             ease: 'expo'
         })
-        gsap.to('.cards', 1, {
-            ease: 'expo',
-            width: '70%'
-        })
+        if(window.innerWidth <= '895'  ){
+            gsap.to('.cards', 1, {
+                ease: 'expo',
+                width: '650px'
+            })
+        }else{
+            gsap.to('.cards', 1, {
+                ease: 'expo',
+                width: '70%'
+            })
+        }
+        
         gsap.to('.info', 1, {
             ease: 'expo',
             opacity: 0
