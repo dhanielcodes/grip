@@ -42,7 +42,7 @@ closer.addEventListener('click', () => {
         pointerEvents: 'none',
         ease: 'expo'
     })
-    if(window.innerWidth >= '1570'  ){
+    if(window.innerWidth >= '1480'  ){
         gsap.to('.cards', 1, {
             ease: 'expo',
             width: '60%'
