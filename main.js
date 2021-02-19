@@ -1,16 +1,16 @@
 const tl = gsap.timeline()
-tl.from('.container h1, .container p, .container button', .8, {
+tl.from('.container h1, .container p, .container button', 2, {
     transform: 'translateY(40px)',
     opacity: 0,
     stagger: .3,
     delay: 1,
     ease: 'expo.inOut'
 })
-tl.from('.cards', .8, {
+tl.from('.cards', 2, {
     transform: 'translateY(40px) translateX(-50%)',
     opacity: 0,
     ease: 'expo.inOut'
-},'-=.6')
+},'-=1.5    ')
 tl.from('.grip', .8, {
     transform: 'translateX(-60%)',
     opacity: 0,
@@ -21,36 +21,37 @@ const ctas = document.querySelectorAll('.cta')
 
 ctas.forEach((cta) => {
     cta.addEventListener('click', () => {
-        gsap.to('.overlay', 1, {
+        gsap.to('.overlay', 1.7, {
             opacity: 1,
             transform: 'translateY(0px)',
             pointerEvents: 'all',
-            ease: 'expo'
+            ease: 'expo.inOut'
         })
-        /* gsap.to('.grip', 1, {
+        gsap.to('.grip', 1, {
+            ease: 'expo.inOut',
             width: '1200px'
-        }) */
+        })
         if(window.innerWidth <= '630'  ){
             gsap.to('.cards', 1, {
-                ease: 'expo',
+                ease: 'expo.inOut',
                 width: '100%'
             })
         }
         else if(window.innerWidth >= '1530' ){
             gsap.to('.cards', 1, {
-                ease: 'expo',
+                ease: 'expo.inOut',
                 width: '80%'
             })
         }
         else{
             gsap.to('.cards', 1, {
-                ease: 'expo',
+                ease: 'expo.inOut',
                 width: '700px'
             })
         }
         
         gsap.to('.info', 1, {
-            ease: 'expo',
+            ease: 'expo.inOut',
             opacity: 0,
             pointerEvents: 'none'
         })
@@ -97,7 +98,7 @@ closer.forEach((close) => {
     gsap.to('.close', 1, {
         pointerEvents: 'none'
     })
-    /* if(window.innerWidth >= '1530' ){
+    if(window.innerWidth >= '1530' ){
         gsap.to('.grip', 1, {
             width: '1000px'
         })
@@ -105,7 +106,7 @@ closer.forEach((close) => {
         gsap.to('.grip', 1, {
             width: '800px'
         })
-    } */
+    }
     
 })
 })
