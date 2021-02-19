@@ -1,5 +1,6 @@
 @font-face { font-family: 'Sharp Grotesk DB Cyr Medium 22'; src: url('./0b6986b36b7d81188f996e58f2ec0643.ttf'); src: url('./0b6986b36b7d81188f996e58f2ec0643.woff'); }
 @font-face { font-family: 'Gilroy-bold'; src: url('./1064f0ad1cb65fdab43bb592ddd8aa91.ttf'); src: url('./1064f0ad1cb65fdab43bb592ddd8aa91.woff'); }
+@font-face { font-family: 'Gilroy-SemiBold'; src: url('./Gilroy-SemiBold.ttf'); src: url('./Gilroy-SemiBold.woff');}
 *{
     padding: 0;
     margin: 0;
@@ -13,7 +14,7 @@ body{
 }
 .grip{
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -24,17 +25,27 @@ body{
     position: fixed;
     right: 0px;
     top: 50%;
-    transform: translateY(-50%) translateX(40%) rotate(-90deg);
-    color: white;
+    transform: translateY(-50%) translateX(34%) rotate(-90deg);
+    color: #9D9D9D;
     cursor: pointer;
-    z-index: 3
+    z-index: 3;
+}
+.vertical::after{
+    content: '';
+    width: 1px;
+    height: 18px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    transform: translateX(-50%) translateY(120%);
+    right: 50%;
 }
 .container{
     padding-top: 50px;
 }
 .container h1{
     color: white;
-    font-size: 70px;
+    font-size: 62px;
 }
 .container h1 span{
     -webkit-text-stroke-width: .1px;
@@ -44,21 +55,25 @@ body{
 .container p{
     margin-top: 20px;
     color: #9A9A9A;
+    font-family: 'Gilroy-SemiBold';
+    font-size: 18px;
 }
 .cta{
     position: relative;
     z-index: 2;
     margin-top: 40px;
     background: #0159F8;
-    padding: 20px 15px;
+    padding: 20px 25px;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     outline: none;
+    font-family: 'Gilroy-SemiBold';
     cursor: pointer;
+    font-size: 15px
 }
 .cards{
-    width: 600px;
+    width: 700px;
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -82,15 +97,15 @@ body{
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
+    transform: translateX(-50%) translateY(10%);
+    width: 600px;
 }
 .info .main{
     width: 60%;
     margin: auto;
 }
 .info p{
-    font-family: 'Gilroy-Bold';
+    font-family: 'Gilroy-SemiBold';
     color: white;
     margin-bottom: 30px;
     font-size: 20px;
@@ -107,6 +122,7 @@ body{
     background: rgba(0, 0, 0, 0.453);
     z-index: 15;
     transform: translateY(30px);
+    backdrop-filter: blur(6px);
 }
 .closer{
     opacity: 0;
@@ -124,7 +140,7 @@ body{
     transform: translate(-50%, -50%);
     width: 350px;
     padding: 40px;
-    border-radius: 30px;
+    border-radius: 20px;
     background: #0D0D0D;
     height: 450px;
     color: white;
@@ -144,11 +160,15 @@ body{
 .form span{
     font-size: 20px;
 }
+.form span img{
+    width: 25px;
+    transform: translateY(10px);
+}
 .form input{
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 12px;
     border: 1px solid #2E2E2E;
-    background: #0D0D0D;
+    background: #080808;
     width: 100%;
     margin-top: 25px;
     outline: none;
@@ -171,11 +191,13 @@ body{
     outline: none;
     cursor: pointer;
     width: 100%;
+    font-family: 'Gilroy-SemiBold'
 }
 .form p{
     margin-top: 20px;
     font-size: 15px;
     cursor: pointer;
+    font-family: 'Gilroy-SemiBold'
 }
 .form .close{
     margin-top: 20px;
