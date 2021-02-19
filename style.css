@@ -40,6 +40,9 @@ body{
     transform: translateX(-50%) translateY(120%);
     right: 50%;
 }
+.building.mobile{
+    display: none;
+}
 .container{
     padding-top: 50px;
 }
@@ -48,9 +51,16 @@ body{
     font-size: 62px;
 }
 .container h1 span{
-    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #ffffff;
   color: #0D0D0D;
+  transition: all .2s;
+}
+.container h1.desktop span:hover{
+  color: #FFFFFF;
+}
+.container h1.mobile{
+    display: none;
 }
 .container p{
     margin-top: 20px;
@@ -105,10 +115,12 @@ body{
     margin: auto;
 }
 .info p{
+    position: relative;
     font-family: 'Gilroy-SemiBold';
     color: white;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 26px;
+    z-index: 3;
 }
 
 .overlay{
@@ -135,9 +147,9 @@ body{
 }
 .form{
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     width: 350px;
     padding: 40px;
     border-radius: 20px;
@@ -173,9 +185,12 @@ body{
     margin-top: 25px;
     outline: none;
     color: white;
+    font-size: 15px;
+    font-family: 'Gilroy-Semibold';
 }
 ::placeholder{
     color: #474747;
+    font-family: 'Gilroy-Semibold';
 }
 .form img{
     width: 90%;
@@ -206,14 +221,17 @@ body{
 
 @media(min-width: 1530px){
     .grip{
-        bottom: 300px;
+        bottom: 20px;
         width: 1000px;
     }
     .cards{
         width: 60%;
     }
     .info .main{
-        width: 1500px;
+        width: 900px;
+    }
+    .info img{
+        width: 800px;
     }
 }
 @media(max-width: 1125px){
@@ -226,7 +244,13 @@ body{
         padding-top: 100px;
     }
     .container h1{
-        font-size: 40px;
+        font-size: 48px;
+    }
+    .container h1.desktop{
+        display: none;
+    }
+    .container h1.mobile{
+        display: block;
     }
     .cards{
         width: 90%;
@@ -240,11 +264,40 @@ body{
 }
 @media (max-width: 400px){
     .form{
-        width: 90%;
-        padding: 20px;
+        width: 100%;
+        padding: 40px;
+        padding-top: 50px;
         height: 410px;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+        border-radius: 20px 20px 0px 0px;
     }
     .form img{
         width: 90%;
+    }
+    .cards{
+        width: 600px;
+    }
+    .building.desktop{
+        display: none;
+    }
+    .building.mobile{
+        position: relative;
+        display: block;
+        margin-top: 25px;
+        color: white;
+        font-family: 'Gilroy-Semibold';
+        cursor: pointer;
+        z-index: 7;
+    }
+    .building.mobile::after{
+        content: '';
+        width: 30%;
+        height: 2px;
+        background-color: #FFFFFF;
+        position: fixed;
+        bottom: 0;
+        transform: translateX(-50%) translateY(8px);
+        left: 50%;
     }
 }
