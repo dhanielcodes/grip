@@ -1,12 +1,12 @@
 const tl = gsap.timeline()
-tl.from('.container h1, .container p, .building.mobile, .container button', 2, {
+tl.from('.container h1, .container p, .building.mobile, .container button', 3, {
     transform: 'translateY(40px)',
     opacity: 0,
     stagger: .1,
     delay: 1,
     ease: 'expo.inOut'
 })
-tl.from('.cards', 2, {
+tl.from('.cards', 3, {
     transform: 'translateY(40px) translateX(-50%)',
     opacity: 0,
     ease: 'expo.inOut'
@@ -154,5 +154,42 @@ const submitForm = (e) => {
 
     })
 }
+
+
+let cursor = document.querySelector('.cursor')
+let innerCursor = document.querySelector('.cursor div')
+document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px'
+    cursor.style.left = e.clientX + 'px'
+})
+ctas.forEach((cta) => {
+    cta.addEventListener('mouseenter', () => {
+        cursor.style.border = 'none'
+        innerCursor.style.width = '100%'
+        innerCursor.style.height = '100%'
+        cursor.style.mixBlendMode = 'difference'
+    })
+    cta.addEventListener('mouseleave', () => {
+        cursor.style.border = '1px solid white'
+        innerCursor.style.width = '20%'
+        innerCursor.style.height = '20%'
+        cursor.style.mixBlendMode = 'normal'
+    })
+})
+verts.forEach((cta) => {
+    cta.addEventListener('mouseenter', () => {
+        cursor.style.border = 'none'
+        innerCursor.style.width = '100%'
+        innerCursor.style.height = '100%'
+        cursor.style.mixBlendMode = 'difference'
+    })
+    cta.addEventListener('mouseleave', () => {
+        cursor.style.border = '1px solid white'
+        innerCursor.style.width = '20%'
+        innerCursor.style.height = '20%'
+        cursor.style.mixBlendMode = 'normal'
+    })
+})
+
 
 form.addEventListener('submit', submitForm)
