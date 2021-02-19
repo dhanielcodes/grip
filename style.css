@@ -220,6 +220,7 @@ body{
 @media (max-width: 400px){
     .form{
         width: 90%;
+        padding: 20px;
     }
     .form img{
         width: 90%;
