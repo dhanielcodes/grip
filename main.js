@@ -23,15 +23,22 @@ ctas.forEach((cta) => {
             pointerEvents: 'all',
             ease: 'expo'
         })
-        if(window.innerWidth <= '895'  ){
+        if(window.innerWidth <= '630'  ){
             gsap.to('.cards', 1, {
                 ease: 'expo',
-                width: '650px'
+                width: '100%'
             })
-        }else{
+        }
+        else if(window.innerWidth >= '1530' ){
             gsap.to('.cards', 1, {
                 ease: 'expo',
-                width: '70%'
+                width: '80%'
+            })
+        }
+        else{
+            gsap.to('.cards', 1, {
+                ease: 'expo',
+                width: '700px'
             })
         }
         
@@ -58,15 +65,22 @@ closer.forEach((close) => {
         pointerEvents: 'none',
         ease: 'expo'
     })
-    if(window.innerWidth >= '1480'  ){
+    if(window.innerWidth <= '630'  ){
+        gsap.to('.cards', 1, {
+            ease: 'expo',
+            width: '90%'
+        })
+    }
+    else if(window.innerWidth >= '1530' ){
         gsap.to('.cards', 1, {
             ease: 'expo',
             width: '60%'
         })
-    }else{
+    }
+    else{
         gsap.to('.cards', 1, {
             ease: 'expo',
-            width: '600px'
+            width: '600px '
         })
     }
     gsap.to('.form2', 1, {

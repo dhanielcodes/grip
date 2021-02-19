@@ -124,7 +124,6 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
-    height: 450px;
     padding: 40px;
     border-radius: 30px;
     background: #0D0D0D;
@@ -208,7 +207,7 @@ body{
         font-size: 40px;
     }
     .cards{
-        width: 100%;
+        width: 90%;
     }
     .info p{
         font-size: 15px;
