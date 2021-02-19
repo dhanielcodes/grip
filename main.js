@@ -1,16 +1,16 @@
 const tl = gsap.timeline()
 tl.from('.container h1, .container p, .container button', 1, {
-    transform: 'translateY(20px)',
-    opacity: 0,
-    stagger: .4,
-    delay: 1,
-    ease: 'expo'
-})
-tl.from('.cards, .grip', 1, {
-    transform: 'translateY(20px) translateX(-50%)',
+    transform: 'translateY(40px)',
     opacity: 0,
     stagger: .3,
-    ease: 'expo'
+    delay: 1,
+    ease: 'expo.in'
+})
+tl.from('.cards, .grip', 1, {
+    transform: 'translateY(40px) translateX(-50%)',
+    opacity: 0,
+    stagger: .3,
+    ease: 'expo.in'
 },'-=1')
 
 const ctas = document.querySelectorAll('.cta')
@@ -22,6 +22,9 @@ ctas.forEach((cta) => {
             transform: 'translateY(0px)',
             pointerEvents: 'all',
             ease: 'expo'
+        })
+        gsap.to('.grip', 1, {
+            width: '1200px'
         })
         if(window.innerWidth <= '630'  ){
             gsap.to('.cards', 1, {
@@ -90,6 +93,15 @@ closer.forEach((close) => {
     gsap.to('.close', 1, {
         pointerEvents: 'none'
     })
+    if(window.innerWidth >= '1530' ){
+        gsap.to('.grip', 1, {
+            width: '1000px'
+        })
+    }else{
+        gsap.to('.grip', 1, {
+            width: '800px'
+        })
+    }
     
 })
 })
