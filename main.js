@@ -1,17 +1,21 @@
 const tl = gsap.timeline()
-tl.from('.container h1, .container p, .container button', 1, {
+tl.from('.container h1, .container p, .container button', .8, {
     transform: 'translateY(40px)',
     opacity: 0,
     stagger: .3,
     delay: 1,
-    ease: 'expo.in'
+    ease: 'expo.inOut'
 })
-tl.from('.cards, .grip', 1, {
+tl.from('.cards', .8, {
     transform: 'translateY(40px) translateX(-50%)',
     opacity: 0,
-    stagger: .3,
-    ease: 'expo.in'
-},'-=1')
+    ease: 'expo.inOut'
+},'-=.6')
+tl.from('.grip', .8, {
+    transform: 'translateX(-60%)',
+    opacity: 0,
+    ease: 'expo.inOut'
+},'-=.6')
 
 const ctas = document.querySelectorAll('.cta')
 
