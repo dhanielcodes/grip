@@ -27,9 +27,9 @@ ctas.forEach((cta) => {
             pointerEvents: 'all',
             ease: 'expo'
         })
-        gsap.to('.grip', 1, {
+        /* gsap.to('.grip', 1, {
             width: '1200px'
-        })
+        }) */
         if(window.innerWidth <= '630'  ){
             gsap.to('.cards', 1, {
                 ease: 'expo',
@@ -97,7 +97,7 @@ closer.forEach((close) => {
     gsap.to('.close', 1, {
         pointerEvents: 'none'
     })
-    if(window.innerWidth >= '1530' ){
+    /* if(window.innerWidth >= '1530' ){
         gsap.to('.grip', 1, {
             width: '1000px'
         })
@@ -105,7 +105,7 @@ closer.forEach((close) => {
         gsap.to('.grip', 1, {
             width: '800px'
         })
-    }
+    } */
     
 })
 })
