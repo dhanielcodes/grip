@@ -10,7 +10,6 @@ body{
     background: #0D0D0D;
     overflow: hidden;
     width: 100%;
-    position: relative;
 }
 .grip{
     position: fixed;
@@ -60,7 +59,7 @@ body{
 }
 .cards{
     width: 600px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
