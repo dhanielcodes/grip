@@ -220,6 +220,9 @@ body{
 }
 
 @media(min-width: 1530px){
+    .container{
+        padding-top: 150px;
+    }
     .grip{
         bottom: 20px;
         width: 1000px;
@@ -259,7 +262,7 @@ body{
         font-size: 15px;
     }
     .grip{
-        width: 100%;
+        width: 700px;
     }
 }
 @media (max-width: 400px){
