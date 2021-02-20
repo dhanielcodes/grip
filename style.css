@@ -383,5 +383,8 @@ body{
     .buttons .cta{
         padding: 16px 25px;
     }
+    .form{
+        height: 500px;
+    }
 
 }
