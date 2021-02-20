@@ -40,7 +40,7 @@ ctas.forEach((cta) => {
         else if(window.innerWidth >= '1530' ){
             gsap.to('.cards', 1, {
                 ease: 'expo.inOut',
-                width: '80%'
+                width: '50%'
             })
         }
         else{
@@ -87,7 +87,7 @@ closer.forEach((close) => {
     else if(window.innerWidth >= '1530' ){
         gsap.to('.cards', 1, {
             ease: 'expo',
-            width: '60%'
+            width: '40%'
         })
     }
     else{
