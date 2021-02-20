@@ -1,12 +1,12 @@
 const tl = gsap.timeline()
-tl.from('.container h1, .container p, .building.mobile, .container button', 3, {
+tl.from('.container h1, .container p, .building.mobile, .container button', 2, {
     transform: 'translateY(40px)',
     opacity: 0,
     stagger: .1,
     delay: 1,
     ease: 'expo.inOut'
 })
-tl.from('.cards', 3, {
+tl.from('.cards', 2, {
     transform: 'translateY(40px) translateX(-50%)',
     opacity: 0,
     ease: 'expo.inOut'
@@ -40,7 +40,7 @@ ctas.forEach((cta) => {
         else if(window.innerWidth >= '1530' ){
             gsap.to('.cards', 1, {
                 ease: 'expo.inOut',
-                width: '50%'
+                width: '60%'
             })
         }
         else{
@@ -87,7 +87,7 @@ closer.forEach((close) => {
     else if(window.innerWidth >= '1530' ){
         gsap.to('.cards', 1, {
             ease: 'expo',
-            width: '40%'
+            width: '55%'
         })
     }
     else{
