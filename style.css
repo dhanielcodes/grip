@@ -295,6 +295,14 @@ body{
         width: 80%;
     }
 }
+@media(max-width: 1030px){
+    body{
+        cursor: default;
+    }
+    .cursor{
+        display: none;
+    }
+}
 @media(max-width: 630px){
     .container{
         padding-top: 40px;
@@ -319,12 +327,6 @@ body{
     }
 }
 @media (max-width: 586px){
-    body{
-        cursor: default;
-    }
-    .cursor{
-        display: none;
-    }
     .info img{
         bottom: 50%;
         left: 50%;
