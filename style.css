@@ -177,6 +177,7 @@ body{
     z-index: 15;
     transform: translateY(30px);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .closer{
     opacity: 0;
@@ -187,6 +188,7 @@ body{
     height: 100%;
     background: rgba(0, 0, 0, 0.453);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .form{
     position: absolute;
