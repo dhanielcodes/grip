@@ -49,18 +49,23 @@ ctas.forEach((cta) => {
                 width: '780px'
             })
         }
-        
-        gsap.to('.info', 1, {
-            ease: 'expo.inOut',
-            opacity: 0,
-            pointerEvents: 'none'
-        })
+    
         gsap.to('.form2', 1, {
             pointerEvents: 'none'
         })
         gsap.to('.close', 1, {
             pointerEvents: 'all'
         })
+    })
+})
+
+const closeInfo = document.querySelector('.buttons .p')
+
+closeInfo.addEventListener('click', () => {
+    gsap.to('.info', 1, {
+        opacity: 0,
+        transform: 'translateY(30px)',
+        pointerEvents: 'none'
     })
 })
 
@@ -190,6 +195,15 @@ verts.forEach((cta) => {
         cursor.style.mixBlendMode = 'normal'
     })
 })
+
+const infoImg = document.querySelector('.info_img')
+
+if (window.innerWidth <= '586'){
+    infoImg.src = './mobileclassic.png'
+}else{
+    infoImg.src = './classic.png'
+
+}
 
 
 form.addEventListener('submit', submitForm)

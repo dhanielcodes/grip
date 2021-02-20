@@ -127,6 +127,8 @@ body{
     pointer-events: none;
     transform: translateY(30px);
 }
+
+
 .info img{
     position: absolute;
     bottom: 0;
@@ -146,10 +148,23 @@ body{
     font-size: 26px;
     z-index: 3;
 }
-.info p:nth-child(2){
-    font-family: 'Sharp Grotesk DB Cyr Medium 22'
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
-
+.buttons .p{
+    position: relative;
+    margin-left: 30px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Gilroy-Semibold';
+    z-index: 5;
+}
+.buttons .cta{
+    margin-top: 0;
+}
 .overlay{
     opacity: 0;
     pointer-events: none;
@@ -198,7 +213,8 @@ body{
     display: none;
 }
 .form2 p{
-    font-family: 'Sharp Grotesk DB Cyr Medium 22'
+    font-family: 'Sharp Grotesk DB Cyr Medium 22';
+    font-size: 20px;
 }
 .form span{
     font-size: 20px;
@@ -245,6 +261,10 @@ body{
     cursor: pointer;
     font-family: 'Gilroy-SemiBold'
 }
+.form2 p{
+    font-family: 'Sharp Grotesk DB Cyr Medium 22';
+    font-size: 20px;
+}
 .form .close{
     margin-top: 20px;
     cursor: pointer;
@@ -270,7 +290,7 @@ body{
 }
 @media(max-width: 1125px){
     .info .main{
-        width: 90%;
+        width: 80%;
     }
 }
 @media(max-width: 630px){
@@ -296,7 +316,19 @@ body{
         width: 700px;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 586px){
+    body{
+        cursor: default;
+    }
+    .cursor{
+        display: none;
+    }
+    .info img{
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        width: 300px;
+    }
     .form{
         width: 100%;
         padding: 40px;
@@ -310,7 +342,7 @@ body{
         width: 90%;
     }
     .cards{
-        width: 600px;
+        width: 450px;
     }
     .building.desktop{
         display: none;
@@ -333,5 +365,21 @@ body{
         bottom: 0;
         transform: translateX(-50%) translateY(8px);
         left: 50%;
+    }
+    .buttons{
+        flex-direction: column;
+    }
+    .buttons .p{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 20px;
+        font-size: 17px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Gilroy-Semibold';
+        z-index: 5;
+    }
+    .buttons .cta{
+        padding: 16px 25px;
     }
 }
