@@ -50,9 +50,6 @@ ctas.forEach((cta) => {
             })
         }
     
-        gsap.to('.form2', 1, {
-            pointerEvents: 'none'
-        })
         gsap.to('.close', 1, {
             pointerEvents: 'all'
         })
@@ -96,10 +93,7 @@ closer.forEach((close) => {
             width: '700px '
         })
     }
-    gsap.to('.form2', 1, {
-        pointerEvents: 'none',
-        ease: 'expo'
-    })
+    
     gsap.to('.close', 1, {
         pointerEvents: 'none'
     })
@@ -112,6 +106,18 @@ closer.forEach((close) => {
             width: '800px'
         })
     }
+    gsap.to('.form1', 1, {
+        opacity: 1,
+        transform: 'translateY(0%)',
+        zIndex: '2'
+    })
+    gsap.to('.form2', 1, {
+        pointerEvents: 'none',
+        transform: 'translateY(-10%)',
+        opacity: 0,
+        display: 'none',
+        ease: 'expo'
+    })
     
 })
 })
@@ -155,9 +161,6 @@ const submitForm = (e) => {
         display: 'block',
         ease: 'expo'
     },'-=.6')
-    gsap.to('.form2', 1, {
-
-    })
 }
 
 
